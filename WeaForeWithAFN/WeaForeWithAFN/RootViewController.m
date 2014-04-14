@@ -75,7 +75,7 @@
 */
 -(void)doWeatherRequest{
     NSString * weaPath = [kWeathPath stringByReplacingOccurrencesOfString:@"cityNumber" withString:_cityID];
-    
+    //To get weather by AFHTTPRequestOperationManager
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     [manager GET:weaPath parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
